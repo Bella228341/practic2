@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Додати новий пост</title>
+</head>
+<body>
+	<h1>Додати новий пост</h1>
+	<form method="POST" action="{{ url_for('add') }}">
+		<label for="title">Заголовок:</label><br>
+		<input type="text" id="title" name="title"><br>
+		<label for="content">Контент:</label><br>
+		<textarea id="content" name="content"></textarea><br>
+		<button type="submit">Додати</button>
+	</form>
+</body>
+</html>
