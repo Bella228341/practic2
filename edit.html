@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Редагувати пост</title>
+</head>
+<body>
+	<h1>Редагувати пост</h1>
+	<form method="POST" action="{{ url_for('edit', post_id=post[0]) }}">
+		<label for="title">Заголовок:</label><br>
+		<input type="text" id="title" name="title" value="{{ post[1] }}"><br>
+		<label for="content">Контент:</label><br>
+		<textarea id="content" name="content">{{ post[2] }}</textarea><br>
+		<button type="submit">Зберегти</button>
+	</form>
+</body>
+</html>
