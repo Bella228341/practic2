@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список постів</title>
+</head>
+<body>
+    <h1>Список постів</h1>
+    <a href="{{url_for('add') }}">Додати новий пост</a>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <h2>{{post[1] }}</h2>
+            <p>{{ post [2] }}</p>
+            <a href="{{ url_for('edit', post_id=post[0]) }}">Редагувати</a>
+				<a href="{{ url_for('delete', post_id=post[0]) }}">Видалити</a>
+			</li>
+		{% endfor %
+	</ul>
+</body>
+</html>
+        </li>
+    </ul>
+</body>
+</html>
