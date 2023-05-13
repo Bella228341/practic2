@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Видалити пост</title>
+</head>
+<body>
+	<h1>Видалити пост</h1>
+	<p>Ви впевнені, що хочете видалити пост "{{ post[1] }}"?</p>
+	<form method="POST" action="{{ url_for('delete', post_id=post[0]) }}">
+		<button type="submit">Так</button>
+		<a href="{{ url_for('index') }}">Ні, повернутися до списку постів</a>
+	</form>
+</body>
+</html>
